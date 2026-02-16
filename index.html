@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon link -->
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.png" />
+    <title>SwiftCart</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font awesome link -->
+    <script
+      src="https://kit.fontawesome.com/68a8208ab0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Remix Icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header
+      class="header-section bg-white shadow-md py-4 px-6 flex flex-col items-center justify-around md:flex-row"
+    >
+      <h3 class="text-xl font-bold text-center my-4 text-[#4F39F6]">
+        SwiftCart
+      </h3>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex justify-center space-x-4 my-2">
+        <li><a href="#" class="text-gray-600 hover:text-[#4F39F6]">Home</a></li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-[#4F39F6]">Products</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-[#4F39F6]">About</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-600 hover:text-[#4F39F6]">Contact</a>
+        </li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <!-- Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-3">
+        <a href="#" class="block hover:text-blue-600">Home</a>
+        <a href="#" class="block hover:text-blue-600">Products</a>
+        <a href="#" class="block hover:text-blue-600">About</a>
+        <a href="#" class="block hover:text-blue-600">Contact</a>
+      </div>
+
+      <div class="text-gray-600 hover:text-gray-800 text-xl cursor-pointer">
+        <i class="ri-shopping-cart-line"></i>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="hero-section relative h-[300px] md:h-[400px] lg:h-[450px] bg-[url('./assets/banner-image.png')] bg-cover bg-center"
+    >
+      <!-- Black Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex flex-col items-start pl-40 justify-center h-full text-white"
+      >
+        <h1 class="text-4xl font-bold mb-4 text-white">
+          Best Collection for you
+        </h1>
+        <p class="text-gray-300 mb-6 max-w-lg">
+          Discover the latest trends in fashion, electronics, and more. Shop
+          with confidence and style at SwiftCart.
+        </p>
+        <button
+          class="bg-[#4F39F6] text-white px-8 py-3 rounded-lg hover:bg-[#3b2dc1] transition duration-300"
+        >
+          Shop Now
+        </button>
+      </div>
+    </section>
+    <!-- choose-us-section -->
+    <section class="choose-us-section py-12 px-40 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">Why Choose Us</h2>
+        <p class="text-center mb-16 text-gray-600">
+          We provide the best shopping experience with top-notch services.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="relative bg-[#F9FAFB] p-6 rounded-lg shadow-md">
+            <p
+              class="absolute top-[-16px] left-[24px] bg-[#EEF2FF] rounded-lg px-2 py-1 border border-3 border-[#FFFFFF] text-2xl text-[#4F39F6]"
+            >
+              <i class="ri-truck-line"></i>
+            </p>
+            <h3 class="text-xl font-semibold mb-2 mt-4">Fast Delivery</h3>
+            <p class="text-gray-700">
+              Get your orders delivered to your doorstep quickly and
+              efficiently.
+            </p>
+          </div>
+          <div class="relative bg-[#F9FAFB] p-6 rounded-lg shadow-md">
+            <p
+              class="absolute top-[-16px] left-[24px] bg-[#EEF2FF] rounded-lg px-2 py-1 border border-3 border-[#FFFFFF] text-2xl text-[#4F39F6]"
+            >
+              <i class="ri-headphone-line"></i>
+            </p>
+            <h3 class="text-xl font-semibold mb-2 mt-4">24/7 Support</h3>
+            <p class="text-gray-700">
+              Our customer support team is available around the clock to assist
+              you.
+            </p>
+          </div>
+          <div class="relative bg-[#F9FAFB] p-6 rounded-lg shadow-md">
+            <p
+              class="absolute top-[-16px] left-[24px] bg-[#EEF2FF] rounded-lg px-2 py-1 border border-3 border-[#FFFFFF] text-2xl text-[#4F39F6]"
+            >
+              <i class="ri-secure-payment-line"></i>
+            </p>
+            <h3 class="text-xl font-semibold mb-2 mt-4">Secure Payment</h3>
+            <p class="text-gray-700">
+              Experience safe and secure transactions with our encrypted payment
+              systems.
+            </p>
+          </div>
+          <div class="relative bg-[#F9FAFB] p-6 rounded-lg shadow-md">
+            <p
+              class="absolute top-[-16px] left-[24px] bg-[#EEF2FF] rounded-lg px-2 py-1 border border-3 border-[#FFFFFF] text-2xl text-[#4F39F6]"
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </p>
+            <h3 class="text-xl font-semibold mb-2 mt-4">Easy Returns</h3>
+            <p class="text-gray-700">
+              Not satisfied? Return your products easily within 30 days.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trending now section -->
+
+    <section class="trending-now-section px-40 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Trending Now</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Product Card -->
+          <div class="bg-white rounded-lg shadow-md">
+            <img
+              src="./assets/backpack.jpg"
+              alt="backpack"
+              class="w-full h-64 bg-[#E5E7EB] object-cover mb-4 rounded"
+            />
+            <div class="flex items-center justify-between p-4 mb-2">
+              <button
+                class="text-[#4F39F6] text-sm bg-[#E0E7FF] py-1 px-2 rounded-2xl font-semibold"
+              >
+                Men's Clothing
+              </button>
+              <p class="text-sm">
+                <span class="text-[#FDC700] p-1"
+                  ><i class="fa-solid fa-star"></i></span
+                >3.9 (120)
+              </p>
+            </div>
+            <h3 class="text-lg font-semibold px-4 mb-2">Backpack</h3>
+            <p class="text-gray-700 px-4 mb-2">$109.95</p>
+            <div class="flex items-center justify-between p-4 mt-4">
+              <button
+                class="border border-[#4F39F6] text-gray-700 px-6 py-1 rounded-md hover:bg-[#3b2dc1] hover:text-white transition duration-300"
+              >
+                <a href="#" class="flex gap-2 items-center justify-center"
+                  ><i class="ri-eye-line"></i><span>Details</span>
+                </a>
+              </button>
+              <button
+                class="bg-[#4F39F6] px-8 py-1 rounded-md hover:bg-[#3b2dc1] text-white transition duration-300"
+              >
+                <a href="#" class="flex items-center justify-center gap-2"
+                  ><i class="ri-shopping-cart-line"></i><span>Add</span></a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md">
+            <img
+              src="./assets/backpack.jpg"
+              alt="backpack"
+              class="w-full h-64 bg-[#E5E7EB] object-cover mb-4 rounded"
+            />
+            <div class="flex items-center justify-between p-4 mb-2">
+              <button
+                class="text-[#4F39F6] text-sm bg-[#E0E7FF] py-1 px-2 rounded-2xl font-semibold"
+              >
+                Men's Clothing
+              </button>
+              <p class="text-sm">
+                <span class="text-[#FDC700] p-1"
+                  ><i class="fa-solid fa-star"></i></span
+                >3.9 (120)
+              </p>
+            </div>
+            <h3 class="text-lg font-semibold px-4 mb-2">Backpack</h3>
+            <p class="text-gray-700 px-4 mb-2">$109.95</p>
+            <div class="flex items-center justify-between p-4 mt-4">
+              <button
+                class="border border-[#4F39F6] text-gray-700 px-6 py-1 rounded-md hover:bg-[#3b2dc1] hover:text-white transition duration-300"
+              >
+                <a href="#" class="flex gap-2 items-center justify-center"
+                  ><i class="ri-eye-line"></i><span>Details</span>
+                </a>
+              </button>
+              <button
+                class="bg-[#4F39F6] px-8 py-1 rounded-md hover:bg-[#3b2dc1] text-white transition duration-300"
+              >
+                <a href="#" class="flex items-center justify-center gap-2"
+                  ><i class="ri-shopping-cart-line"></i><span>Add</span></a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md">
+            <img
+              src="./assets/backpack.jpg"
+              alt="backpack"
+              class="w-full h-64 bg-[#E5E7EB] object-cover mb-4 rounded"
+            />
+            <div class="flex items-center justify-between p-4 mb-2">
+              <button
+                class="text-[#4F39F6] text-sm bg-[#E0E7FF] py-1 px-2 rounded-2xl font-semibold"
+              >
+                Men's Clothing
+              </button>
+              <p class="text-sm">
+                <span class="text-[#FDC700] p-1"
+                  ><i class="fa-solid fa-star"></i></span
+                >3.9 (120)
+              </p>
+            </div>
+            <h3 class="text-lg font-semibold px-4 mb-2">Backpack</h3>
+            <p class="text-gray-700 px-4 mb-2">$109.95</p>
+            <div class="flex items-center justify-between p-4 mt-4">
+              <button
+                class="border border-[#4F39F6] text-gray-700 px-6 py-1 rounded-md hover:bg-[#3b2dc1] hover:text-white transition duration-300"
+              >
+                <a href="#" class="flex gap-2 items-center justify-center"
+                  ><i class="ri-eye-line"></i><span>Details</span>
+                </a>
+              </button>
+              <button
+                class="bg-[#4F39F6] px-8 py-1 rounded-md hover:bg-[#3b2dc1] text-white transition duration-300"
+              >
+                <a href="#" class="flex items-center justify-center gap-2"
+                  ><i class="ri-shopping-cart-line"></i><span>Add</span></a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section bg-[#1E2939] py-6 px-40">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 gap-8"
+      >
+        <div class="flex-2">
+          <h3 class="text-xl font-bold  my-4 text-[#4F39F6]">
+            SwiftCart
+          </h3>
+          <p class=" text-sm text-gray-400">
+            Your one-stop shop for all your fashion and lifestyle needs. Quality
+            products, fast delivery, and excellent support.
+          </p>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-md font-semibold text-gray-400">QUICK LINKS</h3>
+          <ul class="text-gray-400 text-sm mt-2 space-y-1">
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">Products</a></li>
+            <li><a href="#" class="hover:text-gray-300">About</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-md font-semibold text-gray-400">SUPPORT</h3>
+          <ul class="text-gray-400 text-sm mt-2 space-y-1">
+            <li><a href="#" class="hover:text-gray-300">FAQ</a></li>
+            <li><a href="#" class="hover:text-gray-300">Shipping</a></li>
+            <li><a href="#" class="hover:text-gray-300">Returns</a></li>
+            <li><a href="#" class="hover:text-gray-300">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="flex-2">
+          <h3 class="text-md font-semibold text-gray-400">
+            SUBSCRIBE TO OUR NEWSLETTER
+          </h3>
+          <p class="text-gray-400 text-sm mt-2">
+            The latest news, articles, and resources, sent to your inbox weekly.
+          </p>
+          <form class="mt-4 flex gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-2 bg-white rounded-md focus:outline-none text-gray-800"
+            />
+            <button
+              type="submit"
+              class="bg-[#4F39F6] text-white px-6 py-2 rounded-md hover:bg-[#3b2dc1] transition duration-300"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <hr class="border-gray-700 my-4" />
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <p class="text-sm text-gray-400 mb-4 md:mb-0">
+          &copy; 2025 SwiftCart,Inc. All rights reserved.
+        </p>
+        <div class="flex space-x-4 text-gray-400">
+          <a href="#" class="hover:text-gray-400"
+            ><i class="ri-facebook-line"></i
+          ></a>
+          <a href="#" class="hover:text-gray-400"
+            ><i class="ri-twitter-line"></i
+          ></a>
+          <a href="#" class="hover:text-gray-400"
+            ><i class="ri-instagram-line"></i
+          ></a>
+          <a href="#" class="hover:text-gray-400"
+            ><i class="ri-linkedin-line"></i
+          ></a>
+          <a href="#" class="hover:text-gray-400"
+            ><i class="ri-mail-line"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
