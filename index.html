@@ -23,7 +23,7 @@
   <body>
     <!-- Header Section -->
     <header
-      class="header-section bg-white shadow-md py-4 px-6 flex flex-col items-center justify-around md:flex-row"
+      class="header-section bg-white shadow-md py-4 px-6 flex items-center justify-around"
     >
       <h3 class="text-xl font-bold text-center my-4 text-[#4F39F6]">
         SwiftCart
@@ -41,6 +41,10 @@
           <a href="#" class="text-gray-600 hover:text-[#4F39F6]">Contact</a>
         </li>
       </ul>
+
+      <div class="text-gray-600 hover:text-gray-800 text-xl cursor-pointer">
+        <i class="ri-shopping-cart-line"></i>
+      </div>
       <!-- Hamburger Button -->
       <button id="menu-btn" class="md:hidden focus:outline-none">
         <!-- Icon -->
@@ -66,10 +70,6 @@
         <a href="#" class="block hover:text-blue-600">Products</a>
         <a href="#" class="block hover:text-blue-600">About</a>
         <a href="#" class="block hover:text-blue-600">Contact</a>
-      </div>
-
-      <div class="text-gray-600 hover:text-gray-800 text-xl cursor-pointer">
-        <i class="ri-shopping-cart-line"></i>
       </div>
     </header>
     <!-- Hero Section -->
@@ -155,11 +155,15 @@
         </div>
       </div>
     </section>
-    <!-- Trending now section -->
-
-    <section class="trending-now-section px-40 py-12">
+    <!-- products category section -->
+    <section class="products-category-section py-12 px-40">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8">Trending Now</h2>
+        <h2 class="text-3xl font-bold text-center mb-6">Our Products</h2>
+
+    
+        <div id="product-category" class="flex flex-wrap justify-center gap-4 mb-8">
+           <button  class="border border-[#4F39F6] text-gray-700 px-6 py-1 rounded-md hover:bg-[#3b2dc1] hover:text-white transition duration-300" href="#products" >All</button>
+        </div>
 
         <div
           id="product-container"
@@ -170,6 +174,21 @@
       </div>
     </section>
 
+    <!-- Trending now section -->
+    <!--
+    <section class="trending-now-section px-40 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Trending Now</h2>
+
+        <div
+          id="product-container"
+          class="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+        
+        </div>
+      </div>
+    </section>
+-->
     <!-- Footer Section -->
     <footer class="footer-section bg-[#1E2939] py-6 px-40">
       <div

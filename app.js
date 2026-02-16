@@ -25,7 +25,7 @@ const displayProducts = (products) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.innerHTML = `
-       <div class=" bg-white rounded-lg shadow-md">
+       <div class=" hover:scale-105 transition duration-300 bg-white rounded-lg shadow-md">
             <img
               src="${product.image}"
               alt="${product.title}"
@@ -66,3 +66,25 @@ const displayProducts = (products) => {
     productContainer.appendChild(productCard);
   });
 };
+
+// Fetch and display product categories
+
+const displayCategories = async () => {
+  try {
+    const response = await fetch(`${url}/categories`);
+    const categories = await response.json();
+    const categorySelect = document.getElementById("product-category");
+    categories.forEach((category) => {
+      const productCategories = document.createElement("div");
+      productCategories.innerHTML = `
+      <button  class="border border-[#4F39F6] text-gray-700 px-6 py-1 rounded-md hover:bg-[#3b2dc1] hover:text-white transition duration-300" href="#${category}" >${category}</button>
+      
+      `;
+      categorySelect.appendChild(productCategories);
+    });
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+  }
+};
+
+displayCategories();
