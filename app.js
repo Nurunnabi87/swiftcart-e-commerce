@@ -25,11 +25,11 @@ const displayProducts = (products) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.innerHTML = `
-       <div class="bg-white rounded-lg shadow-md">
+       <div class=" bg-white rounded-lg shadow-md">
             <img
               src="${product.image}"
               alt="${product.title}"
-              class="w-full h-64 bg-[#E5E7EB] object-cover mb-4 rounded"
+              class="w-full h-64 object-contain bg-[#E5E7EB]  mb-4 rounded"
             />
             <div class="flex items-center justify-between p-4 mb-2">
               <button
